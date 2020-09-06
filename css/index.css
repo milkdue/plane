@@ -1,0 +1,87 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background-size: cover;
+	background-image: url(../img/map-blackhole.jpg);
+	background-repeat: no-repeat;
+	overflow: hidden;
+}
+.app{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+}
+.app > .wrap{
+	width: 1.592rem;
+	height: 100%;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	/* background-color: aqua; */
+}
+.app > .wrap > img{
+	width: 100%;
+	text-align: center;
+	position: fixed;
+}
+.app > .wrap > img.plane{
+	position: absolute;
+	bottom: 0;
+}
+
+.app > .wrap > img.data{
+	bottom: 1.8rem;
+	visibility: hidden;
+}
+.app > .enemy{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 1.6rem;
+	height: 1.6rem;
+	overflow: hidden;
+	transition: all 1s;
+}
+
+.app > .enemy img{
+	height: 100%;
+}
+
+@keyframes move{
+	0%{
+		background-position:0 0;
+	}
+	100%{
+		background-position:-384px 0;
+	}
+}
+
+.app .boom{
+	position: absolute;
+	width: 64px;
+	height: 64px;
+	overflow:hidden;
+	background-image: url(../img/bom.png);
+	background-size: auto 100%;
+	animation: move 1s 1 steps(6);
+}
+
+#score{
+	position: fixed;
+	left: 0.27rem;
+	top: 0.27rem;
+	color: white;
+	font-size: 0.43rem;
+}
+
+div.enemyAppear{
+	position: absolute;
+	width: 1.6rem;
+	height: 1.6rem;
+	top: 0;
+	overflow: hidden;
+	transition: all 1s;
+}
